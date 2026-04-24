@@ -1,125 +1,125 @@
-import Button from '../../components/Button';
-import logo from '../../assets/img/nubdexchange_logo.png';
+import Button from "../../components/Button";
 
 const AboutPage = () => {
   return (
-    <div className="flex w-full flex-col gap-6">
-      <section className="border-y-2 border-zinc-900 bg-zinc-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-          <div className="rounded-3xl border-2 border-dashed border-zinc-300 bg-zinc-100 p-6">
-            <div className="flex min-h-72 items-center justify-center rounded-[1.25rem] bg-zinc-200">
-              <img src={logo} alt="BulldogEx" className="h-32 w-32 rounded-full border-2 border-zinc-900 bg-zinc-50 object-contain" />
+    <div className="flex w-full flex-col gap-6 bg-zinc-950 pt-20">
+      <section className="border-b-2 border-zinc-900 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center max-w-7xl mx-auto">
+          <div className="rounded-[2.5rem] border-2 border-zinc-900 bg-zinc-900/30 p-8">
+            <div className="flex min-h-80 items-center justify-center rounded-[2rem] bg-zinc-900 overflow-hidden border border-zinc-800">
+              <img
+                src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=800"
+                alt="Lab Equipment"
+                className="h-full w-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700"
+              />
             </div>
           </div>
 
           <div>
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
-              About Store
+            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.5em] text-zinc-500">
+              The Workflow
             </p>
-            <h1 className="max-w-xl text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl">
-              A campus shop focused on useful products and simple ordering.
+            <h1 className="text-5xl font-black leading-tight text-white sm:text-6xl uppercase tracking-tighter">
+              Engineered for the Edit Suite.
             </h1>
-            <p className="mt-4 max-w-lg text-sm leading-7 text-zinc-600 sm:text-base">
-              BulldogEx Shop keeps the low-fidelity layout system while presenting clear
-              product categories, quick actions, and straightforward store information.
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-zinc-400">
+              Vantage Cine Labs provides the technical foundation for modern
+              visual storytelling. Our assets are mathematically calibrated to
+              ensure consistent results across diverse production environments.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Button to="/" variant="primary">
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button to="/products" variant="primary" className="px-8 py-4">
+                View Inventory
+              </Button>
+              <Button to="/" className="px-8 py-4">
                 Back Home
               </Button>
-              <Button to="/products">Open Products</Button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y-2 border-zinc-900 bg-zinc-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
-        <div className="mb-6">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
-            Store Overview
+      <section className="px-4 py-16 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="mb-10">
+          <p className="text-[11px] font-bold uppercase tracking-[0.5em] text-zinc-500">
+            Lab Statistics
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-zinc-900">Quick store blocks</h2>
+          <h2 className="mt-2 text-3xl font-black text-white uppercase tracking-tighter">
+            Inventory Breakdown
+          </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-            <p className="text-2xl font-bold text-zinc-900">08</p>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Items
-            </p>
-          </div>
-          <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-            <p className="text-2xl font-bold text-zinc-900">06</p>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Categories
-            </p>
-          </div>
-          <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-            <p className="text-2xl font-bold text-zinc-900">03</p>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Pickup Slots
-            </p>
-          </div>
-          <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-            <p className="text-2xl font-bold text-zinc-900">24</p>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Orders
-            </p>
-          </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { label: "Digital Assets", val: "120+" },
+            { label: "Hardware Units", val: "14" },
+            { label: "Color Profiles", val: "32" },
+            { label: "Global Users", val: "2.4k" },
+          ].map((stat, i) => (
+            <div
+              key={i}
+              className="rounded-3xl border-2 border-zinc-900 bg-zinc-900/20 p-8 hover:border-zinc-700 transition-colors"
+            >
+              <p className="text-4xl font-black text-white tracking-tighter">
+                {stat.val}
+              </p>
+              <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-600">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="border-y-2 border-zinc-900 bg-zinc-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="border-t-2 border-zinc-900 px-4 py-16 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
-              Store Flow
+            <p className="text-[11px] font-bold uppercase tracking-[0.5em] text-zinc-500">
+              Technical Standards
             </p>
-            <h2 className="mt-2 text-2xl font-semibold text-zinc-900">Stacked shopping wireframe</h2>
+            <h2 className="mt-2 text-3xl font-black text-white uppercase tracking-tighter">
+              The Production Stack
+            </h2>
 
-            <div className="mt-6 space-y-4">
-              <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-                <h3 className="text-lg font-semibold text-zinc-900">Curated Catalog</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-600">
-                  Products are grouped by daily need so shoppers can scan faster.
-                </p>
-              </article>
-
-              <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-                <h3 className="text-lg font-semibold text-zinc-900">Simple Checkout</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-600">
-                  Product pages keep price, stock, and action buttons easy to find.
-                </p>
-              </article>
-
-              <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-                <h3 className="text-lg font-semibold text-zinc-900">Pickup Ready</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-600">
-                  Store information stays direct for students who need quick order updates.
-                </p>
-              </article>
+            <div className="mt-8 space-y-4">
+              {[
+                {
+                  title: "Precision Optics",
+                  desc: "Hardware calibrated for 100% Rec.709 and DCI-P3 accuracy.",
+                },
+                {
+                  title: "Non-Destructive",
+                  desc: "All digital assets maintain maximum dynamic range.",
+                },
+                {
+                  title: "Studio Grade",
+                  desc: "Audio recorded at 96kHz for professional sound stages.",
+                },
+              ].map((item, i) => (
+                <article
+                  key={i}
+                  className="rounded-2xl border-2 border-zinc-900 bg-zinc-900/40 p-6"
+                >
+                  <h3 className="text-sm font-bold text-white uppercase tracking-widest">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-zinc-500 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
 
-          <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
-              Category Grid
+          <div className="rounded-[2.5rem] border-2 border-zinc-900 bg-zinc-900/30 p-8 flex flex-col justify-center text-center">
+            <h3 className="text-xl font-black text-white uppercase tracking-tighter mb-4">
+              Quality Controlled
+            </h3>
+            <p className="text-sm text-zinc-500 max-w-xs mx-auto">
+              Every asset in our catalog undergoes rigorous stress testing in
+              high-pressure edit environments.
             </p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
-                <div className="h-12 w-12 border-2 border-zinc-300 bg-zinc-100" />
-              </div>
-              <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
-                <div className="h-12 w-12 border-2 border-zinc-300 bg-zinc-100" />
-              </div>
-              <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
-                <div className="h-12 w-12 border-2 border-zinc-300 bg-zinc-100" />
-              </div>
-              <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
-                <div className="h-12 w-12 border-2 border-zinc-300 bg-zinc-100" />
-              </div>
-            </div>
-            <Button to="/products" className="mt-5">View Products</Button>
+            <div className="mt-8 h-1 w-24 bg-white mx-auto" />
           </div>
         </div>
       </section>

@@ -1,17 +1,38 @@
 const Footer = () => {
   return (
-    <div className="border-t-2 border-zinc-900 bg-zinc-900 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 text-zinc-50 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p className="text-lg font-bold">BulldogEx Shop</p>
-          <p className="mt-1 text-sm text-zinc-300">Campus essentials, simple ordering.</p>
+    <footer className="border-t-2 border-zinc-900 bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 sm:flex-row sm:items-center sm:justify-between">
+        <div className="space-y-2">
+          <p className="text-2xl font-black uppercase tracking-tighter text-white">
+            Vantage Cine
+          </p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-600">
+            Precision Post-Production Equipment
+          </p>
         </div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-400">
-          Products | Cart | Pickup
-        </p>
-      </div>
-    </div>
-  )
-}
 
-export default Footer
+        <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">
+          {["Licensing", "Privacy", "Technical Support"].map((link) => (
+            <span
+              key={link}
+              className="hover:text-white cursor-pointer transition-colors"
+            >
+              {link}
+            </span>
+          ))}
+        </div>
+
+        <div className="text-right">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-700">
+            © 2026 LABS DIVISION
+          </p>
+          <p className="mt-1 text-[9px] font-bold uppercase tracking-widest text-zinc-800">
+            Lead Developer: Miggy Consul
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
